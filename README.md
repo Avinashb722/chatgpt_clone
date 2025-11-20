@@ -196,4 +196,4 @@ This project is licensed under the MIT License.
 
 - Built with Flask, Groq, Google Gemini, GPT4All, and a lot of glue code.
 - Frontend inspired by modern AI chat UIs like ChatGPT.
-- Developed by **Team Avinash, Anand, Akshay, and Mudhura**.
+
