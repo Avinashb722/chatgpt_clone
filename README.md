@@ -123,7 +123,7 @@ chatgpt_clone/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/chatgpt_clone.git
+git clone https://github.com/Avinashb722/chatgpt_clone.git
 cd chatgpt_clone
 ```
 
@@ -170,44 +170,6 @@ AI_CONFIGS = {
 - Replace the placeholder values with your own API keys.
 - For safety, it's better to load them from environment variables instead of hard-coding them.
 
-Example using environment variables (optional improvement):
-```python
-import os
-
-AI_CONFIGS = {
-    'groq': {
-        'api_key': os.getenv('GROQ_API_KEY', 'gsk_YOUR_GROQ_API_KEY_HERE'),
-        'models': [...]
-    },
-    ...
-}
-```
-
-### 5. Configure Local GPT4All (Optional)
-- Install GPT4All and download one of the supported `.gguf` models.
-- Ensure it is placed in the folder configured in `app.py`:
-
-```python
-model_path = r"C:\Users\Hp\AppData\Local\nomic.ai\GPT4All"
-available_models = [
-    "Meta-Llama-3-8B-Instruct.Q4_0.gguf",
-    "Llama-3.2-1B-Instruct-Q4_0.gguf",
-    "tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf",
-    "mistral-7b-instruct-v0.1.Q4_0.gguf"
-]
-```
-Update this path for your machine and OS if needed.
-
-### 6. Tesseract OCR (Optional but Recommended)
-- For image OCR, install Tesseract on your system and make sure pytesseract can find it.
-- On Windows, you may need to set:
-
-```python
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-```
-
----
-
 ## 🚀 Running the App
 
 From inside the project directory:
@@ -221,44 +183,6 @@ http://127.0.0.1:5000
 ```
 
 Open that in your browser to use the chat UI.
-
----
-
-## 🧑‍💻 Using the CLI Chat Client
-
-`simple_chatbot.py` shows how to call your API from another program.
-
-1. Make sure the Flask server (`app.py`) is running.
-2. Open `simple_chatbot.py` and update:
-   - `API_BASE` – base URL of your Flask app (e.g. `http://localhost:5000`)
-   - `API_KEY` – a key/token if you decide to protect your API (or remove the header logic if not needed).
-3. Run:
-   ```bash
-   python simple_chatbot.py
-   ```
-
-Then chat with your local AI assistant directly from the terminal.
-
----
-
-## 🔒 Security Notes
-
-- **Never commit real API keys** to a public repo.
-- Use `.gitignore` to exclude:
-  - `chat_history/`
-  - `uploads/`
-  - any `.env` files or local model paths.
-- Consider adding rate-limits or authentication before exposing this app on the public internet.
-
----
-
-## 📌 TODO / Ideas
-
-- [ ] Add authentication for the web UI and API.
-- [ ] Add support for more providers (OpenAI, HuggingFace, etc.).
-- [ ] Dockerize the application for easy deployment.
-- [ ] Dark/light theme toggle.
-- [ ] More powerful prompt templates and system message configuration.
 
 ---
 
