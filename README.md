@@ -73,12 +73,12 @@ The app will:
 - Returns stdout/stderr as JSON so the UI can display execution results.
 
 ### 🔑 Simple API Layer
-- REST endpoints you can call from other clients.
+- This project also gives you a ready-made API so other apps can talk to your AI.
 - `simple_chatbot.py` shows how to:
   - Send a message to your local API.
   - Read and print AI responses in the terminal.
   - Use an API key style header.
-
+- In short: Your ChatGPT Clone also works as an API, and any app can use it.
 ---
 
 ## 🧱 Tech Stack
